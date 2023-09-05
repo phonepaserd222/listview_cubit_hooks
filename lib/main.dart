@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:listview_cubit_hooks/utils/counter_cubit.dart';
-import 'package:listview_cubit_hooks/screen/counter_page.dart';
+import 'package:listview_cubit_hooks/screen/welcome_screen.dart';
 
 void main() => runApp(const CounterApp());
 
@@ -10,11 +8,11 @@ class CounterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => CounterCubit()),
-      ],
-      child: const MaterialApp(home: CounterPage()),
+    return MaterialApp(
+      title: 'Flutter demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const WelcomeScreen(),
     );
   }
 }

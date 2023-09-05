@@ -8,7 +8,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  List Images = [
+  List images = [
     "welcome-one.png",
     "welcome-two.png",
     "welcome-three.png",
@@ -18,13 +18,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       body: PageView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: 3,
+        itemCount: images.length,
         itemBuilder: (_, index) {
           return Container(
             width: double.maxFinite,
             height: double.maxFinite,
-            decoration:
-                BoxDecoration(image: DecorationImage(image: AssetImage(""))),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('images/' '${images[index]}'),
+                  fit: BoxFit.cover),
+            ),
           );
         },
       ),
