@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:listview_cubit_hooks/screen/navpages/main_page.dart';
+import 'package:listview_cubit_hooks/screen/detail_page.dart';
 
 void main() => runApp(const CounterApp());
 
@@ -12,7 +12,7 @@ class CounterApp extends StatelessWidget {
       title: 'Flutter demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MainPages(),
+      home: const DetailPage(),
     );
   }
 }
